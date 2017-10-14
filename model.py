@@ -14,8 +14,8 @@ class Number:
     def __eq__(self, other):
         return self.value == other.value
 
-    def __bool__(self, other):
-        return self.value == other.value
+    def __bool__(self):
+        return self.value != 0
 
 
 class Scope:
@@ -59,10 +59,10 @@ class Conditional:
         self.if_false = if_false
 
     def evaluate(self, scope):
-        if self.condition.evaluate(scope).value == 0:
-            return evaluate_list(self.if_false, scope)
-        else:
+        if self.condition.evaluate(scope):
             return evaluate_list(self.if_true, scope)
+        else:
+            return evaluate_list(self.if_false, scope)
 
 
 class Print:
