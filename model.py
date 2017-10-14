@@ -211,7 +211,6 @@ def main():
     Print(BinaryOperation(Number(3), '<', Number(5))).evaluate(scope)
     Print(Conditional(Number(3), None, None)).evaluate(scope)
     Print(BinaryOperation(Number(1), '||', Number(4))).evaluate(scope)
-    Print(BinaryOperation(Number(1), '||', Number(0))).evaluate(scope)
 
 
 if __name__ == "__main__":
