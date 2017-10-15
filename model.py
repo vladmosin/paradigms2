@@ -146,10 +146,10 @@ class UnaryOperation:
 
 
 def evaluate_list(list_of_expressions, scope):
-        res = Number(0)
-        for statement in list_of_expressions or []:
-            res = statement.evaluate(scope)
-        return res
+    res = Number(0)
+    for statement in list_of_expressions or []:
+        res = statement.evaluate(scope)
+    return res
 
 
 def main():
