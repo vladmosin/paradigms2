@@ -133,7 +133,6 @@ class BinaryOperation:
 
 
 class UnaryOperation:
-
     OPERATIONS = {'-': lambda x: -x,
                   '!': lambda x: not bool(x)}
 
@@ -146,9 +145,9 @@ class UnaryOperation:
         return Number(int(self.OPERATIONS[self.op](expression)))
 
 
-def evaluate_list(expr, scope):
+def evaluate_list(list_of_expressions, scope):
         res = Number(0)
-        for statement in expr or []:
+        for statement in list_of_expressions or []:
             res = statement.evaluate(scope)
         return res
 
