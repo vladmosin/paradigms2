@@ -145,9 +145,9 @@ class UnaryOperation:
         return Number(int(self.OPERATIONS[self.op](expression)))
 
 
-def evaluate_list(list_of_expressions, scope):
+def evaluate_list(statements, scope):
     res = Number(0)
-    for statement in list_of_expressions or []:
+    for statement in statements or []:
         res = statement.evaluate(scope)
     return res
 
